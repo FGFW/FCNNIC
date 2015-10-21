@@ -1,0 +1,48 @@
+ 
+@echo off&color 0e
+setlocal enabledelayedexpansion
+set "letter_lss=A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+set "n_lss=0"
+set "n=0"
+for /f "delims=" %%i in ('type "%1"') do (
+ set "str=%%i"
+ for %%j in (%letter_lss%) do (
+  set "str=!str:%%j=%%j!"
+  set/a "n_lss+=1"
+  if !n_lss! equ 26 (
+   if !n! lss 1 (
+    echo,首次进入清理同名数据重建_转换大写
+    echo,!str!>%~n1_转换大写%~x1
+    set/a n+=1
+   ) else if !n! geq 1 (
+    set/a n+=1
+    echo,第 !n! 次执行导出操作
+    echo=!str!>>%~n1_转换大写%~x1
+   )
+   set "n_lss=0"
+  )
+ )
+)
+set "letter_gtr=a b c d e f g h i j k l m n o p q r s t u v w x y z"
+set "n_gtr=0"
+set "n=0"
+for /f "delims=" %%i in ('type "%1"') do (
+ set "str=%%i"
+ for %%j in (%letter_gtr%) do (
+  set "str=!str:%%j=%%j!"
+  set/a "n_gtr+=1"
+  if !n_gtr! equ 26 (
+   if !n! lss 1 (
+    echo=首次进入清理同名数据重建_转换小写
+    echo=!str!>%~n1_转换小写%~x1
+    set/a n+=1
+   ) else if !n! geq 1 (
+    set/a n+=1
+    echo,第 !n! 次执行导出操作
+    echo=!str!>>%~n1_转换小写%~x1
+   )
+   set "n_gtr=0"
+  )
+ )
+)
+pause
