@@ -1,0 +1,897 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Man page of SMARTD</TITLE>
+</HEAD><BODY>
+<H1>SMARTD</H1>
+Section: SMART Monitoring Tools (8)<BR>Updated: 2015-06-04<BR><A HREF="#index">Index</A>
+<A HREF=".">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+<B>smartd</B> - SMART Disk Monitoring Daemon
+<P>
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>smartd [options]</B>
+
+<P>
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+
+[This man page is generated for the Windows version of smartmontools. It does not contain info specific to other platforms.] <P>
+
+
+<B>smartd</B> is a daemon that monitors the Self-Monitoring, Analysis and
+Reporting Technology (SMART) system built into most ATA/SATA and SCSI/SAS
+hard drives and solid-state drives.
+The purpose of SMART is to monitor the reliability of the hard drive
+and predict drive failures, and to carry out different types of drive
+self-tests.
+This version of <B>smartd</B> is compatible with
+ACS-3, ACS-2, ATA8-ACS, ATA/ATAPI-7 and earlier standards
+(see <B>REFERENCES</B> below).
+<P>
+<B>smartd</B> will attempt to enable SMART monitoring on ATA devices
+(equivalent to <B>smartctl -s on</B>) and polls these and SCSI devices
+every 30 minutes (configurable), logging SMART errors and changes of
+SMART Attributes via the SYSLOG interface.  The default location for
+these SYSLOG notifications and warnings is system-dependent
+(typically <B>/var/log/messages</B> or <B>/var/log/syslog</B>).
+To change this default location, please see the <B>'-l'</B>
+command-line option described below.
+<P>
+In addition to logging to a file, <B>smartd</B> can also be configured
+to send email warnings if problems are detected.  Depending upon the
+type of problem, you may want to run self-tests on the disk, back up
+the disk, replace the disk, or use a manufacturer's utility to force
+reallocation of bad or unreadable disk sectors.  If disk problems are
+detected, please see the <B>smartctl</B> manual page and the
+<B>smartmontools</B> web page/FAQ for further guidance.
+<P>
+If you send a <B>USR1</B> signal to <B>smartd</B> it will immediately
+check the status of the disks, and then return to polling the disks
+every 30 minutes. See the <B>'-i'</B> option below for additional
+details.
+<P>
+<B>smartd</B> can be configured at start-up using the configuration
+file <B>/usr/local/etc/smartd.conf</B> (Windows: <B>EXEDIR/smartd.conf</B>).
+If the configuration file is subsequently modified, <B>smartd</B>
+can be told to re-read the configuration file by sending it a
+<B>HUP</B> signal, for example with the command:
+<BR>
+
+<B>killall -HUP smartd</B>.
+<BR>
+
+
+(Windows: See NOTES below.)
+
+<P>
+On startup, if <B>smartd</B> finds a syntax error in the configuration
+file, it will print an error message and then exit. However if
+<B>smartd</B> is already running, then is told with a <B>HUP</B> signal
+to re-read the configuration file, and then find a syntax error in
+this file, it will print an error message and then continue, ignoring
+the contents of the (faulty) configuration file, as if the <B>HUP</B>
+signal had never been received.
+<P>
+When <B>smartd</B> is running in debug mode, the <B>INT</B> signal
+(normally generated from a shell with CONTROL-C) is treated in the
+same way as a <B>HUP</B> signal: it makes <B>smartd</B> reload its
+configuration file. To exit <B>smartd</B> use CONTROL-\
+
+(Windows: CONTROL-Break).
+
+<P>
+On startup, in the absence of the configuration file
+<B>/usr/local/etc/smartd.conf</B>, the <B>smartd</B> daemon first scans for all
+devices that support SMART.  The scanning is done as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<DL COMPACT>
+<DT><B>WINDOWS</B>:<DD>
+Examine all entries <B>&quot;/dev/sd[a-z]&quot;</B>, <B>&quot;/dev/sd[a-c][a-z]&quot;</B>
+and <B>&quot;/dev/sdd[a-x]&quot;</B> (&quot;\\.\PhysicalDrive[0-127]&quot;) for
+IDE/(S)ATA and SCSI disk devices.
+<P>
+If a 3ware 9000 controller is installed, examine all entries
+<B>&quot;/dev/sdX,N&quot;</B> for the first logical drive ('unit'
+<B>&quot;/dev/sdX&quot;</B>) and all physical disks ('ports' <B>&quot;,N&quot;</B>)
+detected behind this controller. Same for a second controller if present.
+<P>
+If directive '-d csmi' or no '-d' directive is specified,
+examine all entries <B>&quot;/dev/csmi[0-9],N&quot;</B> for drives behind an Intel
+ICHxR controller with RST driver.
+<P>
+Disks behind Areca RAID controllers are not included.
+
+</DL>
+<P>
+
+<B>smartd</B> then monitors
+for <I>all</I> possible SMART errors (corresponding to the <B>'-a'</B>
+Directive in the configuration file; see the <B><A HREF="smartd.conf.5.html">smartd.conf</A></B>(5) man page).
+<P>
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<DL COMPACT>
+<DT><B>-A PREFIX, --attributelog=PREFIX</B>
+
+<DD>
+Writes <B>smartd</B> attribute information (normalized and raw
+attribute values) to files 'PREFIX''MODEL-SERIAL.ata.csv' or 'PREFIX''VENDOR-MODEL-SERIAL.scsi.csv'.  At each
+check cycle attributes are logged as a line of semicolon separated triplets
+of the form &quot;attribute-ID;attribute-norm-value;attribute-raw-value;&quot;.
+For SCSI devices error counters and temperature recorded in the form &quot;counter-name;counter-value;&quot;
+Each line is led by a date string of the form &quot;yyyy-mm-dd HH:MM:SS&quot; (in UTC).
+<P>
+
+
+
+
+
+
+MODEL and SERIAL are build from drive identify information, invalid
+characters are replaced by underline.
+<P>
+If the PREFIX has the form '/path/dir/' (e.g. '/var/lib/smartd/'), then
+files 'MODEL-SERIAL.ata.csv' are created in directory '/path/dir'.
+If the PREFIX has the form '/path/name' (e.g. '/var/lib/misc/attrlog-'),
+then files 'nameMODEL-SERIAL.ata.csv' are created in directory '/path/'.
+The path must be absolute, except if debug mode is enabled.
+<DT><B>-B [+]FILE, --drivedb=[+]FILE</B>
+
+<DD>
+[ATA only] Read the drive database from FILE.  The new database replaces
+the built in database by default.  If '+' is specified, then the new entries
+prepend the built in entries.
+Please see the <B><A HREF="smartctl.8.html">smartctl</A></B>(8) man page for further details.
+<DT><B>-c FILE, --configfile=FILE</B>
+
+<DD>
+Read <B>smartd</B> configuration Directives from FILE, instead of from
+the default location <B>/usr/local/etc/smartd.conf</B> (Windows: <B>EXEDIR/smartd.conf</B>).
+If FILE does <B>not</B> exist, then <B>smartd</B> will print an error
+message and exit with nonzero status.  Thus, '-c /usr/local/etc/smartd.conf'
+can be used to verify the existence of the default configuration file.
+<P>
+By using '-' for FILE, the configuration is read from standard
+input. This is useful for commands like:
+<PRE>
+<B>echo /dev/sdb -m user@home -M test | smartd -c - -q onecheck</B>
+</PRE>
+
+to perform quick and simple checks without a configuration file.
+
+
+
+
+
+
+
+
+<DT><B>-d, --debug</B>
+
+<DD>
+Runs <B>smartd</B> in &quot;debug&quot; mode. In this mode, it displays status
+information to STDOUT rather than logging it to SYSLOG and does not
+<B>fork</B>(2) into the background and detach from the controlling
+terminal.  In this mode, <B>smartd</B> also prints more verbose
+information about what it is doing than when operating in &quot;daemon&quot;
+mode. In this mode, the <B>INT</B> signal (normally generated from a
+terminal with CONTROL-C) makes <B>smartd</B> reload its configuration
+file.  Please use CONTROL-\ to exit
+
+(Windows: CONTROL-Break).
+<P>
+[Windows only] The &quot;debug&quot; mode can be toggled by the command
+<B>smartd sigusr2</B>. A new console for debug output is opened when
+debug mode is enabled.
+
+<DT><B>-D, --showdirectives</B>
+
+<DD>
+Prints a list (to STDOUT) of all the possible Directives which may
+appear in the configuration file /usr/local/etc/smartd.conf, and then exits.
+These Directives are described in the <B><A HREF="smartd.conf.5.html">smartd.conf</A></B>(5) man page.
+They may appear in the configuration file following the device name.
+<DT><B>-h, --help, --usage</B>
+
+<DD>
+Prints usage message to STDOUT and exits.
+<DT><B>-i N, --interval=N</B>
+
+<DD>
+Sets the interval between disk checks to <I>N</I> seconds, where
+<I>N</I> is a decimal integer.  The minimum allowed value is ten and
+the maximum is the largest positive integer that can be represented on
+your system (often 2^31-1).  The default is 1800 seconds.
+<P>
+Note that the superuser can make <B>smartd</B> check the status of the
+disks at any time by sending it the <B>SIGUSR1</B> signal, for example
+with the command:
+<PRE>
+<B>kill -SIGUSR1 &lt;pid&gt;</B>
+</PRE>
+
+where <B>&lt;pid&gt;</B> is the process id number of <B>smartd</B>.  One may
+also use:
+<PRE>
+<B>killall -USR1 smartd</B>
+</PRE>
+
+for the same purpose.
+<BR>
+
+
+(Windows: See NOTES below.)
+
+<DT><B>-l FACILITY, --logfacility=FACILITY</B>
+
+<DD>
+Uses syslog facility FACILITY to log the messages from <B>smartd</B>.
+Here FACILITY is one of <I>local0</I>, <I>local1</I>, ..., <I>local7</I>,
+or <I>daemon</I> [default].  If this command-line option is not used,
+then by default messages from <B>smartd</B> are logged to the facility
+<I>daemon</I>.
+<P>
+If you would like to have <B>smartd</B> messages logged somewhere other
+than the default location, include (for example) '-l local3' in its
+start up argument list.
+Tell the syslog daemon to log all messages from facility <B>local3</B>
+to (for example) '/var/log/smartd.log'.
+<P>
+For more detailed information, please refer to the man pages for
+the local syslog daemon, typically <B>syslogd</B>(8), <B>syslog-ng</B>(8)
+or <B>rsyslogd</B>(8).
+
+
+
+
+
+
+<P>
+Windows: Some <B>syslog</B> functionality is implemented
+internally in <B>smartd</B> as follows: If no '-l' option
+(or '-l daemon') is specified, messages are written to Windows
+event log or to file <B>./smartd.log</B> if event log is not available
+(access denied). By specifying other values of FACILITY,
+log output is redirected as follows:
+'-l local0' to file <B>./smartd.log</B>,
+'-l local1' to standard output (redirect with '&gt;' to any file),
+'-l local2' to standard error,
+'-l local[3-7]': to file <B>./smartd[1-5].log</B>.
+
+<DT><B>-n, --no-fork</B>
+
+<DD>
+Do not fork into background; this is useful when executed from modern
+init methods like initng, minit, supervise or systemd.
+
+
+
+
+
+
+<P>
+On Windows, this option is not available, use '--service' instead.
+
+<DT><B>-p NAME, --pidfile=NAME</B>
+
+<DD>
+Writes pidfile <I>NAME</I> containing the <B>smartd</B> Process ID
+number (PID).  To avoid symlink attacks make sure the directory to
+which pidfile is written is only writable for root.  Without this
+option, or if the --debug option is given, no PID file is written on
+startup.  If <B>smartd</B> is killed with a maskable signal then the
+pidfile is removed.
+<DT><B>-q WHEN, --quit=WHEN</B>
+
+<DD>
+Specifies when, if ever, <B>smartd</B> should exit.  The valid
+arguments are to this option are:
+<P>
+<I>nodev</I>
+
+- Exit if there are no devices to monitor, or if any errors are found
+at startup in the configuration file.  This is the default.
+<P>
+<I>errors</I>
+
+- Exit if there are no devices to monitor, or if any errors are found
+in the configuration file /usr/local/etc/smartd.conf at startup or whenever it
+is reloaded.
+<P>
+<I>nodevstartup</I>
+
+- Exit if there are no devices to monitor at startup.  But continue
+to run if no devices are found whenever the configuration file is
+reloaded.
+<P>
+<I>never</I>
+
+- Only exit if a fatal error occurs (no remaining system memory,
+invalid command line arguments). In this mode, even if there are no
+devices to monitor, or if the configuration file
+<B>/usr/local/etc/smartd.conf</B> has errors, <B>smartd</B> will continue to run,
+waiting to load a configuration file listing valid devices.
+<P>
+<I>onecheck</I>
+
+- Start <B>smartd</B> in debug mode, then register devices, then check
+device's SMART status once, and then exit with zero exit status if all
+of these steps worked correctly.
+<P>
+This last option is intended for 'distribution-writers' who want to
+create automated scripts to determine whether or not to automatically
+start up <B>smartd</B> after installing smartmontools.  After starting
+<B>smartd</B> with this command-line option, the distribution's install
+scripts should wait a reasonable length of time (say ten seconds).  If
+<B>smartd</B> has not exited with zero status by that time, the script
+should send <B>smartd</B> a SIGTERM or SIGKILL and assume that
+<B>smartd</B> will not operate correctly on the host.  Conversely, if
+<B>smartd</B> exits with zero status, then it is safe to run
+<B>smartd</B> in normal daemon mode. If <B>smartd</B> is unable to
+monitor any devices or encounters other problems then it will return
+with non-zero exit status.
+<P>
+<I>showtests</I>
+
+- Start <B>smartd</B> in debug mode, then register devices, then write
+a list of future scheduled self tests to stdout, and then exit with zero
+exit status if all of these steps worked correctly.
+Device's SMART status is not checked.
+<P>
+This option is intended to test whether the '-s REGEX' directives in
+smartd.conf will have the desired effect. The output lists the next test
+schedules, limited to 5 tests per type and device. This is followed by a
+summary of all tests of each device within the next 90 days.
+<DT><B>-r TYPE, --report=TYPE</B>
+
+<DD>
+Intended primarily to help
+<B>smartmontools</B>
+
+developers understand the behavior of
+<B>smartmontools</B>
+
+on non-conforming or poorly-conforming hardware.  This option reports
+details of
+<B>smartd</B>
+transactions with the device.  The option can be used multiple times.
+When used just once, it shows a record of the ioctl() transactions
+with the device.  When used more than once, the detail of these ioctl()
+transactions are reported in greater detail.  The valid arguments to
+this option are:
+<P>
+<I>ioctl</I>
+
+- report all ioctl() transactions.
+<P>
+<I>ataioctl</I>
+
+- report only ioctl() transactions with ATA devices.
+<P>
+<I>scsiioctl</I>
+
+- report only ioctl() transactions with SCSI devices.
+<P>
+Any argument may include a positive integer to specify the level of
+detail that should be reported.  The argument should be followed by a
+comma then the integer with no spaces.  For example, <I>ataioctl,2</I>
+The default level is 1, so '-r ataioctl,1' and '-r ataioctl' are
+equivalent.
+<DT><B>-s PREFIX, --savestates=PREFIX</B>
+
+<DD>
+Reads/writes <B>smartd</B> state information from/to files
+'PREFIX''MODEL-SERIAL.ata.state' or 'PREFIX''VENDOR-MODEL-SERIAL.scsi.state'. 
+This preserves SMART attributes, drive min and max temperatures (-W directive),
+info about last sent warning email
+(-m directive), and the time of next check of the self-test REGEXP
+(-s directive) across boot cycles.
+<P>
+
+
+
+
+
+
+
+MODEL and SERIAL are build from drive identify information, invalid
+characters are replaced by underline.
+<P>
+If the PREFIX has the form '/path/dir/' (e.g. '/var/lib/smartd/'), then
+files 'MODEL-SERIAL.ata.state' are created in directory '/path/dir'.
+If the PREFIX has the form '/path/name' (e.g. '/var/lib/misc/smartd-'),
+then files 'nameMODEL-SERIAL.ata.state' are created in directory '/path/'.
+The path must be absolute, except if debug mode is enabled.
+<P>
+The state information files are read on smartd startup. The files are
+always (re)written after reading the configuration file, before rereading
+the configuration file (SIGHUP), before smartd shutdown, and after a check
+forced by SIGUSR1. After a normal check cycle, a file is only rewritten if
+an important change (which usually results in a SYSLOG output) occurred.
+<DT><B>-w PATH, --warnexec=PATH</B>
+
+<DD>
+Run the executable PATH instead of the default script when smartd
+needs to send warning messages.  PATH must point to an executable binary
+file or script.
+The default script is
+
+
+
+
+
+
+
+<B>EXEDIR/smartd_warning.cmd</B>. 
+
+<DT><B>--service</B>
+
+<DD>
+[Windows only] Enables <B>smartd</B> to run as a Windows service.
+The option must be specified in the service command line as the first
+argument. It should not be used from console.
+See NOTES below for details.
+
+<DT><B>-V, --version, --license, --copyright</B>
+
+<DD>
+Prints version, copyright, license, home page and SVN revision
+information for your copy of <B>smartd</B> to STDOUT and then exits.
+Please include this information if you are reporting bugs or problems.
+<P>
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>EXAMPLES</H2>
+
+<B>smartd</B>
+
+<BR>
+
+Runs the daemon in forked mode. This is the normal way to run
+<B>smartd</B>.
+Entries are logged to SYSLOG.
+<P>
+<B>smartd -d -i 30</B>
+
+<BR>
+
+Run in foreground (debug) mode, checking the disk status
+every 30 seconds.
+<P>
+<B>smartd -q onecheck</B>
+
+<BR>
+
+Registers devices, and checks the status of the devices exactly
+once. The exit status (the shell
+<B>$?</B>
+
+variable) will be zero if all went well, and nonzero if no devices
+were detected or some other problem was encountered.
+<P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>CONFIGURATION</H2>
+
+The syntax of the <B><A HREF="smartd.conf.5.html">smartd.conf</A></B>(5) file is discussed separately.
+<P>
+<A NAME="lbAH">&nbsp;</A>
+<H2>NOTES</H2>
+
+<B>smartd</B>
+will make log entries at loglevel 
+<B>LOG_INFO</B>
+
+if the Normalized SMART Attribute values have changed, as reported using the
+<B>'-t', '-p',</B>
+
+or
+<B>'-u'</B>
+
+Directives. For example:
+<PRE>
+<B>'Device: /dev/sda, SMART Attribute: 194 Temperature_Celsius changed from 94 to 93'</B>
+</PRE>
+
+Note that in this message, the value given is the 'Normalized' not the 'Raw' 
+Attribute value (the disk temperature in this case is about 22
+Celsius).  The 
+<B>'-R'</B>
+
+and 
+<B>'-r'</B>
+
+Directives modify this behavior, so that the information is printed
+with the Raw values as well, for example:
+<PRE>
+<B>'Device: /dev/sda, SMART Attribute: 194 Temperature_Celsius changed from 94 [Raw 22] to 93 [Raw 23]'</B>
+</PRE>
+
+Here the Raw values are the actual disk temperatures in Celsius.  The
+way in which the Raw values are printed, and the names under which the
+Attributes are reported, is governed by the various
+<B>'-v Num,Description'</B>
+
+Directives described previously.
+<P>
+Please see the
+<B>smartctl</B>
+
+manual page for further explanation of the differences between
+Normalized and Raw Attribute values.
+<P>
+<B>smartd</B>
+will make log entries at loglevel
+<B>LOG_CRIT</B>
+
+if a SMART Attribute has failed, for example:
+<PRE>
+<B>'Device: /dev/sdc, Failed SMART Attribute: 5 Reallocated_Sector_Ct'</B>
+</PRE>
+
+<BR>&nbsp;This&nbsp;loglevel&nbsp;is&nbsp;used&nbsp;for&nbsp;reporting&nbsp;enabled&nbsp;by&nbsp;the
+<B>'-H', -f', '-l&nbsp;selftest',</B>
+
+and
+<B>'-l&nbsp;error'</B>
+
+Directives. Entries reporting failure of SMART Prefailure Attributes
+should not be ignored: they mean that the disk is failing.  Use the
+<B>smartctl</B>
+
+utility to investigate. 
+<P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On Windows, the log messages are written to the event log or to a file.
+See documentation of the '-l FACILITY' option above for details.
+<P>
+On Windows, the following built-in commands can be used to control
+<B>smartd</B>, if running as a daemon:
+<P>
+'<B>smartd status</B>' - check status
+<P>
+'<B>smartd stop</B>' - stop smartd
+<P>
+'<B>smartd reload</B>' - reread config file
+<P>
+'<B>smartd restart</B>' - restart smartd
+<P>
+'<B>smartd sigusr1</B>' - check disks now
+<P>
+'<B>smartd sigusr2</B>' - toggle debug mode
+<P>
+The Windows Version of <B>smartd</B> has buildin support for services:
+<P>
+'<B>smartd install [options]</B>' installs a service
+named &quot;smartd&quot; (display name &quot;SmartD Service&quot;) using the command line
+'/INSTALLPATH/smartd.exe --service [options]'.
+This also installs smartd.exe as a event message file for the Windows
+event viewer.
+<P>
+'<B>smartd remove</B>' can later be used to remove the service and
+event message entries from the registry.
+<P>
+Upon startup, the smartd service changes the working directory
+to its own installation path. If smartd.conf and blat.exe are stored
+in this directory, no '-c' option and '-M exec' directive is needed.
+<P>
+The debug mode ('-d', '-q onecheck') does not work if smartd is
+running as service.
+<P>
+The service can be controlled as usual with Windows commands 'net'
+or 'sc' ('<B>net start smartd</B>', '<B>net stop smartd</B>').
+<P>
+Pausing the service ('<B>net pause smartd</B>') sets the interval between
+disk checks ('-i N') to infinite.
+<P>
+Continuing the paused service ('<B>net continue smartd</B>') resets the
+interval and rereads the configuration file immediately (like <B>SIGHUP</B>):
+<P>
+Continuing a still running service ('<B>net continue smartd</B>' without
+preceding '<B>net pause smartd</B>') does not reread configuration but
+checks disks immediately (like <B>SIGUSR1</B>).
+<P>
+
+<A NAME="lbAI">&nbsp;</A>
+<H2>LOG TIMESTAMP TIMEZONE</H2>
+
+When <B>smartd</B> makes log entries, these are time-stamped.  The time
+stamps are in the computer's local time zone, which is generally set
+using either the environment variable '<B>TZ</B>' or using a
+time-zone file such as <B>/etc/localtime</B>.  You may wish to change
+the timezone while <B>smartd</B> is running (for example, if you carry
+a laptop to a new time-zone and don't reboot it).  Due to a bug in the
+<B>tzset</B>(3) function of many unix standard C libraries, the
+time-zone stamps of <B>smartd</B> might not change.  For some systems,
+<B>smartd</B> will work around this problem <I>if</I> the time-zone is
+set using <B>/etc/localtime</B>. The work-around <I>fails</I> if the
+time-zone is set using the '<B>TZ</B>' variable (or a file that it
+points to).
+<P>
+<A NAME="lbAJ">&nbsp;</A>
+<H2>EXIT STATUS</H2>
+
+The exit status (return value) of <B>smartd</B> can have the following values:
+<DL COMPACT>
+<DT><B>0:</B>
+
+<DD>
+Daemon startup successful, or <B>smartd</B> was killed by a SIGTERM (or in debug mode, a SIGQUIT).
+<DT><B>1:</B>
+
+<DD>
+Commandline did not parse.
+<DT><B>2:</B>
+
+<DD>
+There was a syntax error in the config file.
+<DT><B>3:</B>
+
+<DD>
+Forking the daemon failed.
+<DT><B>4:</B>
+
+<DD>
+Couldn't create PID file.
+<DT><B>5:</B>
+
+<DD>
+Config file does not exist (only returned in conjunction with the '-c' option).
+<DT><B>6:</B>
+
+<DD>
+Config file exists, but cannot be read.
+<DT><B>8:</B>
+
+<DD>
+<B>smartd</B>
+ran out of memory during startup.
+<DT><B>10:</B>
+
+<DD>
+An inconsistency was found in <B>smartd</B>'s internal data
+structures. This should never happen.  It must be due to either a
+coding or compiler bug.  <I>Please</I> report such failures to
+smartmontools developers, see REPORTING BUGS below.
+<DT><B>16:</B>
+
+<DD>
+A device explicitly listed in
+<B>/usr/local/etc/smartd.conf</B>
+
+can't be monitored.
+<DT><B>17:</B>
+
+<DD>
+<B>smartd</B>
+didn't find any devices to monitor.
+<DT><B>254:</B>
+
+<DD>
+When in daemon mode,
+<B>smartd</B>
+received a SIGINT or SIGQUIT.  (Note that in debug mode, SIGINT has
+the same effect as SIGHUP, and makes <B>smartd</B> reload its
+configuration file. SIGQUIT has the same effect as SIGTERM and causes
+<B>smartd</B> to exit with zero exit status.
+<DT><B>132 and above</B>
+
+<DD>
+<B>smartd</B>
+was killed by a signal that is not explicitly listed above.  The exit
+status is then 128 plus the signal number.  For example if
+<B>smartd</B>
+is killed by SIGKILL (signal 9) then the exit status is 137.
+<P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</DL>
+<A NAME="lbAK">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+<B>Bruce Allen</B> (project initiator),
+<BR>
+
+<B>Christian Franke</B> (project manager, Windows port and all sort of things),
+<BR>
+
+<B>Douglas Gilbert</B> (SCSI subsystem),
+<BR>
+
+<B>Volker Kuhlmann</B> (moderator of support and database mailing list),
+<BR>
+
+<B>Gabriele Pohl</B> (wiki &amp; development team support),
+<BR>
+
+<B>Alex Samorukov</B> (FreeBSD port and more, new Trac wiki).
+<P>
+Many other individuals have made contributions and corrections,
+see AUTHORS, ChangeLog and repository files.
+<P>
+The first smartmontools code was derived from the smartsuite package,
+written by Michael Cornwell and Andre Hedrick.
+<P>
+<A NAME="lbAL">&nbsp;</A>
+<H2>REPORTING BUGS</H2>
+
+To submit a bug report, create a ticket in smartmontools wiki:
+<BR>
+
+&lt;<B><A HREF="http://www.smartmontools.org/">http://www.smartmontools.org/</A></B>&gt;.
+<BR>
+
+Alternatively send the info to the smartmontools support mailing list:
+<BR>
+
+&lt;<B><A HREF="https://lists.sourceforge.net/lists/listinfo/smartmontools-support">https://lists.sourceforge.net/lists/listinfo/smartmontools-support</A>&gt;.
+<P>
+</B><A NAME="lbAM">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<B><A HREF="smartd.conf.5.html">smartd.conf</A></B>(5), <B><A HREF="smartctl.8.html">smartctl</A></B>(8), <B>update-smart-drivedb</B>(8).
+<P>
+<A NAME="lbAN">&nbsp;</A>
+<H2>REFERENCES</H2>
+
+Please see the following web site for more info:
+<B><A HREF="http://smartmontools.sourceforge.net/">http://smartmontools.sourceforge.net/</A></B>
+<P>
+An introductory article about smartmontools is <I>Monitoring Hard
+Disks with SMART</I>, by Bruce Allen, Linux Journal, January 2004,
+pages 74-77. This is <B><A HREF="http://www.linuxjournal.com/article/6983">http://www.linuxjournal.com/article/6983</A></B>
+online.
+<P>
+If you would like to understand better how SMART works, and what it
+does, a good place to start is with Sections 4.8 and 6.54 of the first
+volume of the 'AT Attachment with Packet Interface-7' (ATA/ATAPI-7)
+specification Revision 4b.  This documents the SMART functionality which the
+<B>smartmontools</B> utilities provide access to.
+<P>
+The functioning of SMART was originally defined by the SFF-8035i
+revision 2 and the SFF-8055i revision 1.4 specifications.  These are
+publications of the Small Form Factors (SFF) Committee.
+<P>
+Links to these and other documents may be found on the Links page of the
+<B>smartmontools</B> Wiki at <B><A HREF="http://www.smartmontools.org/wiki/Links">http://www.smartmontools.org/wiki/Links</A></B> .
+<P>
+<A NAME="lbAO">&nbsp;</A>
+<H2>PACKAGE VERSION</H2>
+
+smartmontools-6.4 2015-06-04 r4109
+<BR>
+
+$Id: smartd.8.in 4102 2015-06-01 19:25:47Z chrfranke $
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">EXAMPLES</A><DD>
+<DT><A HREF="#lbAG">CONFIGURATION</A><DD>
+<DT><A HREF="#lbAH">NOTES</A><DD>
+<DT><A HREF="#lbAI">LOG TIMESTAMP TIMEZONE</A><DD>
+<DT><A HREF="#lbAJ">EXIT STATUS</A><DD>
+<DT><A HREF="#lbAK">AUTHORS</A><DD>
+<DT><A HREF="#lbAL">REPORTING BUGS</A><DD>
+<DT><A HREF="#lbAM">SEE ALSO</A><DD>
+<DT><A HREF="#lbAN">REFERENCES</A><DD>
+<DT><A HREF="#lbAO">PACKAGE VERSION</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF=".">man2html</A>,
+using the manual pages.<BR>
+Time: 16:35:19 GMT, June 04, 2015
+</BODY>
+</HTML>
