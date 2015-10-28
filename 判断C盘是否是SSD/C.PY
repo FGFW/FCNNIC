@@ -6,6 +6,10 @@
 import pySMART
 
 os=pySMART.utils
-devlist=pySMART.DeviceList()
-devlist.devices[0]
+#devlist=pySMART.DeviceList()
+#devlist.devices[0]
+dev=pySMART.Device("pd1")
+print(dev)
+
+x=os.rescan_device_busses()
 
