@@ -1,4 +1,4 @@
-#python二进制修改bcwav文件
+﻿#python二进制修改bcwav文件
 
 # 批处理BAT以十六进制方式修改文件内容
 # http://www.bathome.net/thread-37858-1-1.html
@@ -32,13 +32,4 @@ for l in os.listdir(): #默认仅list当前目录
         f.flush()
         f.close()
         print(l,"文件已经修改")
-
-
-
-        
-        
-  
-    
-   
-    
 
