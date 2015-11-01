@@ -1,3 +1,3 @@
-二进制修改bcwav文件
+浜岃繘鍒朵慨鏀筨cwav鏂囦欢
 
 http://www.bathome.net/thread-37858-1-1.html
