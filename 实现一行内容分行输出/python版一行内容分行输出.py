@@ -69,6 +69,7 @@ for s in reg:
     print("".join(s))
 
 """
+输出:
 方法一:===============
 abcdefghi
 ABCDEFGHI
