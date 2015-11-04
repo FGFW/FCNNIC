@@ -1,4 +1,4 @@
-#python版一行内容分行输出
+﻿#python版一行内容分行输出
 #依山居 18:14 2015/11/4
 #题目来源 http://www.bathome.net/thread-1454-1-1.html
 
@@ -68,7 +68,25 @@ for s in reg:
     s=re.findall(rega,a)
     print("".join(s))
 
-
-
-
-
+"""
+方法一:===============
+abcdefghi
+ABCDEFGHI
+123456789
+一二三四五六七八九
+方法二:===============
+abcdefghi
+ABCDEFGHI
+123456789
+一二三四五六七八九
+方法3:回字有N种写法===============
+abcdefghi
+ABCDEFGHI
+123456789
+一二三四五六七八九
+方法4:回字有一种叫做正则的写法===============
+abcdefghi
+ABCDEFGHI
+123456789
+一二三四五六七八九
+"""
