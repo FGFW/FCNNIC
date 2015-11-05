@@ -68,7 +68,7 @@ for s in reg:
     s=re.findall(rega,a)
     print("".join(s))
 
-print("=======================论回字和第五种写法============")
+print("=======================论回字的第五种写法============")
 l=list(a)
 ta=tb=tc=td=''
 for r in range(0,9):
@@ -81,24 +81,18 @@ print(tb)
 print(tc)
 print(td)
 
+print("==========试试回字的第六种写法好不好使==========")
+t=''
+lena=len(a)
+for s in range(0,4):
+    t=''    
+    for l in range(s,lena,4):
+        t+=a[l]
+    print(t)
+
+
 """
 输出:
-方法一:===============
-abcdefghi
-ABCDEFGHI
-123456789
-一二三四五六七八九
-方法二:===============
-abcdefghi
-ABCDEFGHI
-123456789
-一二三四五六七八九
-方法3:回字有N种写法===============
-abcdefghi
-ABCDEFGHI
-123456789
-一二三四五六七八九
-方法4:回字有一种叫做正则的写法===============
 abcdefghi
 ABCDEFGHI
 123456789
