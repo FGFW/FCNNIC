@@ -68,6 +68,19 @@ for s in reg:
     s=re.findall(rega,a)
     print("".join(s))
 
+print("=======================论回字和第五种写法============")
+l=list(a)
+ta=tb=tc=td=''
+for r in range(0,9):
+    ta+=l.pop(0)
+    tb+=l.pop(0)
+    tc+=l.pop(0)
+    td+=l.pop(0)
+print(ta)
+print(tb)
+print(tc)
+print(td)
+
 """
 输出:
 方法一:===============
