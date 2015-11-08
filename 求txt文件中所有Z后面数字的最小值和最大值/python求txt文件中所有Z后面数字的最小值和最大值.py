@@ -22,7 +22,10 @@ print("大： ",zl[-1])
 
 #总结是不管是max 还是sort 比较的对象都应该统一是数字。
 #所以处理前需要先丢掉字母Z并转成浮点数。
-
+try:
+    input("Press enter to continue")
+except SyntaxError:
+    pass
 """
 输出:
 大:  30.0

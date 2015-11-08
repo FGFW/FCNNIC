@@ -2,6 +2,7 @@
 #依山居 2:23 2015/11/8
 #题目来源: http://www.bathome.net/thread-38027-1-1.html
 #这个版本改用正则表达式处理文本.
+
 import re
 def ftxt(txt="a.txt"):
         #global zl
@@ -11,8 +12,8 @@ def ftxt(txt="a.txt"):
                 for line in f:
                         regresult=re.findall(reg,line)
                         if regresult:
-                                for r in regresult:                                        
-                                       zl.append(float(r))
+                                for r in regresult:
+                                        zl.append(float(r))
         print(len(zl))
         return zl
         
@@ -28,7 +29,10 @@ print("小: ",zl[0])
 print("大： ",zl[-1])
 #总结是不管是max 还是sort 比较的对象都应该统一是数字。
 #所以处理前需要先丢掉字母Z并转成浮点数。
-
+try:
+    input("执行完成,按回车退出")
+except SyntaxError:
+    pass
 """
 输出:
 11
