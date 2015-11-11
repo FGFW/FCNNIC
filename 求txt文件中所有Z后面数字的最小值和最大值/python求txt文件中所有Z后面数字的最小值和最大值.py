@@ -1,9 +1,12 @@
-#python求txt文件中所有Z后面数字的最小值和最大值
+﻿#python求txt文件中所有Z后面数字的最小值和最大值
 #依山居 19:04 2015/11/7
 #题目来源: http://www.bathome.net/thread-38027-1-1.html
 
+import time
+start=time.time()
+
 zl=[]
-with open("a.txt") as f:
+with open("b.txt") as f:
         for l in f:
                 txtline=l.rsplit()
                 for ll in txtline:
@@ -22,8 +25,12 @@ print("大： ",zl[-1])
 
 #总结是不管是max 还是sort 比较的对象都应该统一是数字。
 #所以处理前需要先丢掉字母Z并转成浮点数。
+
+end=time.time()
+pt=end-start
+print("程序运行时间：",pt)
 try:
-    input("Press enter to continue")
+    input("按回车退出")
 except SyntaxError:
     pass
 """
