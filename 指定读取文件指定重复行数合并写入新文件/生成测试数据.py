@@ -7,7 +7,7 @@ import time
 start=time.time()
 
 an=1
-bn=3
+bn=2
 cn=6
 x=1000000
 al=["%012d\n" % r for r in range(an*x)]
