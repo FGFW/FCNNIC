@@ -2,6 +2,7 @@
 一列文本进行字符串格式操作转成三列3
 依山居 8:18 2015/11/12
 题目来源 http://www.bathome.net/thread-38097-1-1.html
+
 相关资料: 飘逸的python - 增强的格式化字符串format函数
 http://blog.csdn.net/handsomekang/article/details/9183303
 
@@ -32,7 +33,7 @@ with open("a.txt") as f:
     m=len(l)%3
     print(len(l),len(l)%3)
     
-    l=l+(d[m])*["--"]
+    l=l+(d[m])*["--"]#如果长度不能被整除则补上长度。
     print(len(l),len(l)%3)
     end=time.time()
     pt=end-start
