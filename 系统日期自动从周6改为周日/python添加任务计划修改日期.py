@@ -1,4 +1,4 @@
-##--##
+﻿##--##
 """
 python自动修改系统日期跳过周日
 题目来源 http://www.bathome.net/thread-38000-1-1.html
@@ -22,11 +22,10 @@ def 我是开关():
     with open(sys.argv[0],"r+",encoding="utf-8") as f:
         f.seek(2)
         标识位=f.read(2)
+        f.close()
         if 标识位=="--":
-            f.close()
             return False
         if 标识位=="++":
-            f.close()
             return True
         
 def 修改开关(标识位):
@@ -63,7 +62,7 @@ def 修改日期():
         os.system("date "+today)
         修改开关("++")
         os.system("net stop W32Time")
-        os.system("sc config W32Time start= disable")
+        os.system("sc config W32Time start= disabled")
     
 if len(sys.argv)>1 and sys.argv[1]=="task":
     修改日期()
