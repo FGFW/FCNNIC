@@ -6,8 +6,10 @@ python把不以引号结尾的行与下一行连接
 """
 newtxt=[]
 with open("a.txt") as f:
-    txt=f.read().rsplit("\n")
+    txt=f.readlines()
+    txt=[r.rstrip() for r in txt]
     rn=len(txt)
+    print("总行数:",rn)
     newtxt=[txt[r][:]+txt[r+1][:] if ('\"' not in txt[r][-1]) else txt[r] for r in range(rn) ]
     newtxt=[r+"\n" for r in newtxt if '\"' in r[0]]
     f.close()
