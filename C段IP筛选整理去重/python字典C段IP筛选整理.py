@@ -16,3 +16,7 @@ for r in ip:
 for r in 字典:
     print(r+".1")
 
+try:
+    input("回车退出")
+except SyntaxError:
+    pass
