@@ -1,4 +1,4 @@
-"""
+﻿"""
 python正则处理DEL文件换行问题
 http://www.bathome.net/thread-38164-1-1.html
 依山居 20:38 2015/11/18
