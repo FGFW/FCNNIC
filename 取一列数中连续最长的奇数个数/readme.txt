@@ -1,2 +1,2 @@
-取一列数中连续最长的奇数个数
+鍙栦竴鍒楁暟涓繛缁渶闀跨殑濂囨暟涓暟
 http://www.oschina.net/code/snippet_2519674_52255
