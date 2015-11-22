@@ -18,8 +18,8 @@ for d in dg:
     date={r[1] for r in txt if (d in r[0]) and ("-" in r[1])}
     date=sorted(date)
     for t in date:
-        导购成交金额=sum([float(s[-3]) for s in txt if (d in s[0] and (t in s[1]) and s[-3]!='')])
-        日单数=len({s[2] for s in txt if (d in s[0] and (t in s[1]) and s[-3])})
+        导购成交金额=sum([float(s[-2]) for s in txt if (d in s[0] and (t in s[1]) and s[-2]!='')])
+        日单数=len({s[2] for s in txt if (d in s[0] and (t in s[1]) and s[-4])})
         导购客单价=导购成交金额/日单数
         print(d,"%s 成交额:%4.2f 客单价:%2.2f 日单数:%2d" %(t,导购成交金额,导购客单价,日单数))
 
