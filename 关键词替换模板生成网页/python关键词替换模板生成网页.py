@@ -1,4 +1,5 @@
 ﻿"""
+python关键词替换模板生成网页.py
 http://www.bathome.net/thread-37777-1-1.html
 依山居 1:07 2015/11/24
 →_→强烈鄙视做垃圾站的
