@@ -1,0 +1,4 @@
+FA45VSF01759        fastboot
+HT4CHSF01311        fastboot
+FA45VSF01700        fastboot
+HT4CHSF01302        fastboot
