@@ -39,9 +39,3 @@ for r in fn:
         c1=c1+c3
     with open(outputdirs+out,"w+") as f:
         f.writelines(c1)
-
-        
-        
-        
-            
-        
