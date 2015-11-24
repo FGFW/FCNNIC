@@ -4,6 +4,10 @@ python把不以引号结尾的行与下一行连接
 依山居  13:13 2015/11/17
 就是当是练习列表解析用法了
 """
+import time
+start=time.time()
+print("运行中..."*3)
+
 newtxt=[]
 with open("a.txt") as f:
     txt=f.readlines()
@@ -17,3 +21,10 @@ with open("a.txt") as f:
 with open("b.txt","w+") as f:
     f.writelines(newtxt)
     f.close()
+end=time.time()
+pt=end-start
+print("运行耗时：",pt)
+try:
+    input("按回车退出")
+except SyntaxError:
+    pass
