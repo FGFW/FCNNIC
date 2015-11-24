@@ -1,7 +1,0 @@
-"1","12","123","1234"
-"A","AB","ABC","ABCD"
-"R","RS","RST","RSTU"
-"E","EF","EFG","EFGH"
-"c","EF","EFG","EFGH"
-"d","EF","EFG","EFGHxxx"
-"f","EF","EFG","EFGH13:05 2015/11/17"
