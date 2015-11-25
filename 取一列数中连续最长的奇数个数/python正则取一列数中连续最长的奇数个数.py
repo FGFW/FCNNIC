@@ -13,3 +13,12 @@ s=''.join([str(i) for i in a])    #s='2330024757'
 rec=re.compile(res)
 result=re.findall(rec,s)     #result=['33', '757']
 print(max([len(s) for s in result]))
+
+#正则方法2 改进(= =折腾死了)，可以处理两位及正负号的情况
+a=[2,3,3,0,0,2,4,7,5,7,24234,24234,5345,564,464,242,-34,-89,-67,-2341,999,9,9,99]
+import re
+a=' '.join([str(r) for r in a])
+a=re.sub(r"[-+]?\d*[13579]","1",a)
+a=re.sub(r"[-+]?\d*[24680]","0",a)
+a=a.replace(" ","").split("0")
+print(max([len(r) for r in a]))
