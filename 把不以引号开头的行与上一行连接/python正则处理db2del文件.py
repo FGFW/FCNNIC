@@ -13,7 +13,17 @@ of="a.txt"
 rec=re.compile('(\"?)(\n)([^\"])')
 with open(of) as f:
     txt=f.read()
+
+    end=time.time()
+    pt=end-start
+    print("运行耗时：",pt)
+
     res=re.sub(rec,r'\1\3',txt)
+
+    end=time.time()
+    pt=end-start
+    print("运行耗时：",pt)
+
     f.close()
 
 with open("out.txt","w+") as f:
@@ -27,3 +37,7 @@ try:
     input("按回车退出")
 except SyntaxError:
     pass
+
+"""
+
+"""
