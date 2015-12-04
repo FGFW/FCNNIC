@@ -7,7 +7,7 @@ python format替换模板文件中的字符串.py
 import random
 import os
 
-#先把模板中需要替换的地方改成:{0[0]}这样的格式，可以直接用format直接替代。
+#先把模板中需要替换的地方改成:{0[0]}这样的格式，就可以直接用format直接替换。
 moban="""
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
