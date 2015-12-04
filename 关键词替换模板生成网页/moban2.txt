@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{0[0]}{0[1]}{0[2]}{0[3]}</title>
+
+<meta name="keywords" content="{0[0]}{0[1]}{0[2]}{0[3]}" />
+
+<meta name="description" content="{0[0]}努力打造{0[1]}影视导航系统为最好的{0[3]}影视系统!" />
+
+
+
+</head>
+
+上下标签比如关键词1要一样。
+
+<li>Copyright © 2015 {0[0]} all rights reserved.  <a href="/detail/map.html" target="_blank">网站地图</a></li>
+
+</body>
+
+</html>
