@@ -17,3 +17,4 @@ littlescript/替换文本中的行首年份/aa1.txt
 littlescript/CSV文件编码转换/test.csv
 把不以引号开头的行与上一行连接/a.txt
 文本文件隔行删除或每隔几行删除/result.txt
+N个文件合并成N列/result.txt
