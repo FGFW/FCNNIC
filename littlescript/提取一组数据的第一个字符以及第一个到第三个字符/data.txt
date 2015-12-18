@@ -1,0 +1,559 @@
+B05BC02	D02AE01									
+C04AC01	C10AD02									
+N04BA01										
+A01AC03	A07EA02	C05AA01	D07AA02	D07XA01	H02AB09	S01BA02	S01CB03	S02BA01		
+A01AD01	B02BC09	C01CA24	R01AA14	R03AA01	S01EA01					
+G03CA03										
+A01AD05	B01AC06	N02BA01								
+A03BA01	S01FA01									
+G02CC02	M01AE02	M02AA12								
+C01EB16	G02CC01	M01AE01	M02AA13							
+A01AC03	A07EA02	C05AA01	D07AA02	D07XA01	H02AB09	S01BA02	S01CB03	S02BA01		
+G03AC01	G03DC02									
+J01MA02	S01AE03	S02AA15	S03AA07							
+A11CC05										
+J04AB02										
+N02BE01										
+D06BB03	J05AB01	S01AD03								
+C07AB03										
+P01AX06										
+A07EA06	D07AC09	R01AD05	R03BA02							
+C09AA01										
+N05BA02										
+C03BA04										
+A01AB18	D01AC01	G01AF02								
+A01AC02	C05AA09	D07AB19	D07XB05	D10AA03	H02AB02	R01AD03	S01BA01	S01CB01	S02BA06	S03BA01
+B01AC07										
+A10BB07										
+A10BB01										
+C03AA03										
+J04AC01										
+C09CA01										
+C01BB01	C05AD01	D04AB01	N01BB02	R02AD02	S01HA07	S02DA01				
+C10AA02										
+C09AA03										
+C09AA10										
+C03DB02										
+C09CA03										
+M03BA03										
+C02AB01										
+A02BB01	G02AD06									
+C07AA12										
+C10AA01										
+C03DA01										
+N05AH03										
+A02BC01										
+C09AA06										
+V03AB04										
+M04AB01										
+D04AA10	R06AD02									
+N02AC04										
+C07AA05										
+R01BA02										
+N05AB03										
+C01CA06	R01AA04	R01AB01	R01BA03	S01FB01	S01GA05					
+C01DA08	C05AE02									
+C09CA04										
+C05AD02	D04AB06	N01BA03	S01HA03							
+N01BB04										
+G03CA01	L02AA03									
+~										
+M04AC01										
+~										
+A10BB12										
+A10BX02										
+A10BG02										
+C07AA06	S01ED01									
+C02AC01	N02CX02	S01EA04								
+C08CA01										
+C08DA01										
+C09AA07										
+C09AA02										
+C09AA13										
+C09CA06										
+C09CA07										
+C07AB07										
+C03DB01										
+C03AA01										
+S01EC03										
+R06AB04										
+N02CC01										
+N02CA02										
+R03AC02	R03CC02									
+R03AC12										
+D07AC13	D07XC03	R01AD09	R03BA07							
+N01BB03										
+N06AA09										
+N06AB03										
+N02AA01										
+N02AA05										
+R05DA09										
+C10AA05										
+D11AX18	M01AB05	M02AA15	S01BC03							
+M05BA04										
+A10BA02										
+A10BG03										
+G03AC03	G03AD01									
+G03AC01	G03DC02									
+G02CC02	M01AE02	M02AA12								
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+~										
+S01FA04										
+G04CA02										
+A07AA05	J01XB02	S01AA18	S02AA11	S03AA03						
+B05CB04	B05XA02									
+C09CA08										
+G03DC06										
+C02DB02										
+V03AB15										
+N02AX02										
+R03AC13										
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+G03CA03										
+N01BB01										
+N06BC01										
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+D07AC17	R01AD08	R03BA05								
+C10AX09										
+A02BC05										
+A03BA01	S01FA01									
+D11AX21	S01EA05									
+C09CA02										
+C01BB01	C05AD01	D04AB01	N01BB02	R02AD02	S01HA07	S02DA01				
+N07BB04										
+R05DA04										
+A01AD01	B02BC09	C01CA24	R01AA14	R03AA01	S01EA01					
+R01AX03	R03BB01									
+J01MA02	S01AE03	S02AA15	S03AA07							
+N02AD01										
+C01BA01										
+G03AC09										
+~										
+P01BB01										
+D06AX05	J01XX10	R02AB04								
+~										
+G03DB08										
+G04CB02										
+A07DA01										
+~										
+G03AC08										
+~										
+~										
+R03AC13										
+~										
+R01BA02										
+J01EA01										
+C09XA02										
+A10BH01										
+N02AE01	N07BC01									
+C09AA09										
+V03AB15										
+A10BH03										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+B05BC02	B05BC02									
+C04AC01	C04AC01									
+N04BA01										
+A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03		
+A01AD01	A01AD01	A01AD01	A01AD01	A01AD01	A01AD01					
+G03CA03										
+A01AD05	A01AD05	A01AD05								
+A03BA01	A03BA01									
+G02CC02	G02CC02	G02CC02								
+C01EB16	C01EB16	C01EB16	C01EB16							
+A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03	A01AC03		
+G03AC01	G03AC01									
+J01MA02	J01MA02	J01MA02	J01MA02							
+A11CC05										
+J04AB02										
+N02BE01										
+D06BB03	D06BB03	D06BB03								
+C07AB03										
+P01AX06										
+A07EA06	A07EA06	A07EA06	A07EA06							
+C09AA01										
+N05BA02										
+0										
+A01AB18	A01AB18	A01AB18								
+A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02	A01AC02
+B01AC07										
+0										
+A10BB01										
+C03AA03										
+J04AC01										
+C09CA01										
+C01BB01	C01BB01	C01BB01	C01BB01	C01BB01	C01BB01	C01BB01				
+C10AA02										
+C09AA03										
+C09AA10										
+C03DB02										
+C09CA03										
+M03BA03										
+C02AB01										
+A02BB01	A02BB01									
+C07AA12										
+C10AA01										
+C03DA01										
+N05AH03										
+A02BC01										
+C09AA06										
+0										
+M04AB01										
+D04AA10	D04AA10									
+0										
+C07AA05										
+0										
+N05AB03										
+C01CA06	C01CA06	C01CA06	C01CA06	C01CA06	C01CA06					
+C01DA08	C01DA08									
+C09CA04										
+C05AD02	C05AD02	C05AD02	C05AD02							
+N01BB04										
+G03CA01	G03CA01									
+0										
+M04AC01										
+0										
+A10BB12										
+A10BX02										
+0										
+C07AA06	C07AA06									
+C02AC01	C02AC01	C02AC01								
+C08CA01										
+C08DA01										
+C09AA07										
+C09AA02										
+0										
+C09CA06										
+C09CA07										
+C07AB07										
+B05BC02	D02AE01									
+C04AC01	C10AD02									
+N04BA01										
+A01AC03	A07EA02	C05AA01	D07AA02	D07XA01	H02AB09	S01BA02	S01CB03	S02BA01		
+A01AD01	B02BC09	C01CA24	R01AA14	R03AA01	S01EA01					
+G03CA03										
+A01AD05	B01AC06	N02BA01								
+A03BA01	S01FA01									
+G02CC02	M01AE02	M02AA12								
+C01EB16	G02CC01	M01AE01	M02AA13							
+A01AC03	A07EA02	C05AA01	D07AA02	D07XA01	H02AB09	S01BA02	S01CB03	S02BA01		
+G03AC01	G03DC02									
+J01MA02	S01AE03	S02AA15	S03AA07							
+A11CC05										
+J04AB02										
+N02BE01										
+D06BB03	J05AB01	S01AD03								
+C07AB03										
+P01AX06										
+A07EA06	D07AC09	R01AD05	R03BA02							
+C09AA01										
+N05BA02										
+C03BA04										
+A01AB18	D01AC01	G01AF02								
+A01AC02	C05AA09	D07AB19	D07XB05	D10AA03	H02AB02	R01AD03	S01BA01	S01CB01	S02BA06	S03BA01
+B01AC07										
+A10BB07										
+A10BB01										
+C03AA03										
+J04AC01										
+C09CA01										
+C01BB01	C05AD01	D04AB01	N01BB02	R02AD02	S01HA07	S02DA01				
+C10AA02										
+C09AA03										
+C09AA10										
+C03DB02										
+C09CA03										
+M03BA03										
+C02AB01										
+A02BB01	G02AD06									
+C07AA12										
+C10AA01										
+C03DA01										
+N05AH03										
+A02BC01										
+C09AA06										
+V03AB04										
+M04AB01										
+D04AA10	R06AD02									
+N02AC04										
+C07AA05										
+R01BA02										
+N05AB03										
+C01CA06	R01AA04	R01AB01	R01BA03	S01FB01	S01GA05					
+C01DA08	C05AE02									
+C09CA04										
+C05AD02	D04AB06	N01BA03	S01HA03							
+N01BB04										
+G03CA01	L02AA03									
+~										
+M04AC01										
+~										
+A10BB12										
+A10BX02										
+A10BG02										
+C07AA06	S01ED01									
+C02AC01	N02CX02	S01EA04								
+C08CA01										
+C08DA01										
+C09AA07										
+C09AA02										
+C09AA13										
+C09CA06										
+C09CA07										
+C07AB07										
+C03DB01										
+C03AA01										
+S01EC03										
+R06AB04										
+N02CC01										
+N02CA02										
+R03AC02	R03CC02									
+R03AC12										
+D07AC13	D07XC03	R01AD09	R03BA07							
+N01BB03										
+N06AA09										
+N06AB03										
+N02AA01										
+N02AA05										
+R05DA09										
+C10AA05										
+D11AX18	M01AB05	M02AA15	S01BC03							
+M05BA04										
+A10BA02										
+A10BG03										
+G03AC03	G03AD01									
+G03AC01	G03DC02									
+G02CC02	M01AE02	M02AA12								
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+~										
+S01FA04										
+G04CA02										
+A07AA05	J01XB02	S01AA18	S02AA11	S03AA03						
+B05CB04	B05XA02									
+C09CA08										
+G03DC06										
+C02DB02										
+V03AB15										
+N02AX02										
+R03AC13										
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+G03CA03										
+N01BB01										
+N06BC01										
+A07EA04	C05AA05	D07AC01	D07XC01	H02AB01	R01AD06	R03BA04	S01BA06	S01CB04	S02BA07	S03BA03
+D07AC17	R01AD08	R03BA05								
+C10AX09										
+A02BC05										
+A03BA01	S01FA01									
+D11AX21	S01EA05									
+C09CA02										
+C01BB01	C05AD01	D04AB01	N01BB02	R02AD02	S01HA07	S02DA01				
+N07BB04										
+R05DA04										
+A01AD01	B02BC09	C01CA24	R01AA14	R03AA01	S01EA01					
+R01AX03	R03BB01									
+J01MA02	S01AE03	S02AA15	S03AA07							
+N02AD01										
+C01BA01										
+G03AC09										
+~										
+P01BB01										
+D06AX05	J01XX10	R02AB04								
+~										
+G03DB08										
+G04CB02										
+A07DA01										
+~										
+G03AC08										
+~										
+~										
+R03AC13										
+~										
+R01BA02										
+J01EA01										
+C09XA02										
+A10BH01										
+N02AE01	N07BC01									
+C09AA09										
+V03AB15										
+A10BH03										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
