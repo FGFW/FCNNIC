@@ -20,3 +20,6 @@ littlescript/CSV文件编码转换/test.csv
 N个文件合并成N列/result.txt
 littlescript/提取一组数据的第一个字符以及第一个到第三个字符/result1.txt
 littlescript/提取一组数据的第一个字符以及第一个到第三个字符/result2.txt
+读取文本内容并在每行行尾添加系列数字/result.txt
+读取文本内容并在每行行尾添加系列数字/数据.txt
+读取文本内容并在每行行尾添加系列数字/序列.txt
