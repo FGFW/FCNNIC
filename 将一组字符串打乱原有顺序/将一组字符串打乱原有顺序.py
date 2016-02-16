@@ -1,5 +1,5 @@
 """
-如何将一组字符串打乱原有顺序
+如何将一组字符串打乱原有顺序.py
 http://bbs.bathome.net/thread-39382-1-1.html
 2016年2月16日 11:25:56 依山居
 """
@@ -20,6 +20,11 @@ print(rs)
 
 rs=random.sample(ns,len(ns))
 print(rs)
+
+#方法3 论坛里的ivor发现了更好的方法random.shuffle(items)
+
+random.shuffle(ns)
+print(ns) #不是返回新的列表而是直接修改ns的顺序
 
 try:
     input("回车退出")
