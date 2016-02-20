@@ -5,7 +5,7 @@ http://www.oschina.net/question/2400361_2151742
 """
 import random
 with open("10000x50.txt","w+") as f:
-    f.write(",".join([str(r).rjust(5) for r in range(1,51)])+"\n")#列名
+    f.write(",".join([str(r).center(5) for r in range(1,51)])+"\n")#列名
     for n in range(0,10000):
          rn=','.join([str(random.randint(10000,99999)) for r in range(1,51)])+"\n"
          f.write(rn)
