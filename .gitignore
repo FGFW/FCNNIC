@@ -28,3 +28,5 @@ littlescript/提取指定文本/result.txt
 littlescript/a.txt
 读取文本内容并在每行行尾添加系列数字/10000x50.txt
 读取文本内容并在每行行尾添加系列数字/sj.txt
+
+python正则提取分子信息sdf文件内容/result.txt
