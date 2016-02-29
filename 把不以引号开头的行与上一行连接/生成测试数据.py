@@ -29,7 +29,7 @@ xxx"
 "c","EF","EFG","EFGH"
 """
 
-b=a*2000000
+b=a*200000
 with open("a.txt","w") as f:
     f.write(b)
 
