@@ -7,3 +7,9 @@ http://bbs.bathome.net/thread-39529-1-1.html
 txt=open("mac.bat").readlines()
 re=list(set(txt[1:-2]))+txt[-2:]
 open('mac_new.bat',"w+").writelines(re)
+
+#方法二 可以保持原有的顺序
+txt=open("mac.bat").readlines()
+results=[]
+[results.append(r) for r in txt if r not in results]
+open("mac_new.bat","w+").writelines(results)
