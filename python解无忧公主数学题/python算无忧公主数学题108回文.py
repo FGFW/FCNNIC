@@ -7,7 +7,7 @@ python解无忧公主数学题108回文.py
 #利用到了集合的特性，进行集合交集运算
 #2016年3月8日 05:59:41
 def 方法1():
-    f=lambda x,y: True if str(x*y)==str(x*y)[::-1] else None
+    f=lambda x,y: str(x*y)==str(x*y)[::-1]
     x91={r for r in range(1,100) if f(r,91)}
     x93={r for r in range(1,100) if f(r,93)}
     x95={r for r in range(1,100) if f(r,95)}
@@ -21,8 +21,7 @@ def 方法1():
 def ff2():
     
     def f(x,y):
-        if str(x*y)==str(x*y)[::-1]:
-            return x
+        return str(x*y)==str(x*y)[::-1]
         
     results=[r for r in range(1,100) if f(r,91) and f(r,93) and f(r,95) and f(r,97)]
     print("方法2结果:",results)
@@ -36,8 +35,8 @@ ff2()
 import re
 def ff3():
     def f(x,y):
-        if re.match(r"""^(\d?)(\d?)(\d?)(\d?)\4\3\2\1$""",str(x*y)):
-            return True
+        return re.match(r"""^(\d?)(\d?)(\d?)(\d?)\4\3\2\1$""",str(x*y))
+
     x91=[r for r in range(1,100) if f(r,91)]
     results=[r for r in x91 if f(r,93) and f(r,95) and f(r,97)]
     print("方法3结果:",results)
