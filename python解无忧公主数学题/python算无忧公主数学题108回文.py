@@ -16,4 +16,18 @@ def 方法1():
     return (x91&x93&x95&x97)
 
 方法1()
+
+#2016年3月8日 06:23:32
+def ff2():
+    
+    def f(x,y):
+        if str(x*y)==str(x*y)[::-1]:
+            return x
+        
+    results=[r for r in range(1,100) if f(r,91) and f(r,93) and f(r,95) and f(r,97)]
+    print("方法2结果:",results)
+    #2016年3月8日 06:40:33
+    return results
+
+ff2()
         
