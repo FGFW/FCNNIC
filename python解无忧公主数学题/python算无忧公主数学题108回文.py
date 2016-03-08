@@ -2,6 +2,7 @@
 python解无忧公主数学题108回文.py
 题目来源: http://mp.weixin.qq.com/s?__biz=MzI5ODEwMDQyNw==&mid=402360973&idx=1&sn=31014f87b8e65c9cd1d40c625c9c3d90&3rd=MzA3MDU4NTYzMw==&scene=6#rd
 2016年3月7日 14:59:17 codegay
+
 """
 
 #利用到了集合的特性，进行集合交集运算
@@ -43,3 +44,15 @@ def ff3():
     #2016年3月8日 07:29:33
 
 ff3()
+
+#2016年3月8日 08:39:02
+#再尝试改进一下写法
+def ff4():
+    l=[91,93,95,97]
+    #
+    f=lambda x,iters: False not in [str(x*r)==str(x*r)[::-1] for r in iters]
+    results=[r for r in range(1,100) if f(r,l)]
+    print("方法4结果:",results)
+    #2016年3月8日 09:17:07
+ff4()
+    
