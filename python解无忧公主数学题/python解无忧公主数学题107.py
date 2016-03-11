@@ -12,3 +12,14 @@ def ff1():
     print("方法1: AB =",ab)
     #2016年3月9日 13:03:02 
 ff1()
+
+
+def ff2(exp=996*997*998*999,s="9900x4yz0024"):
+    #2016年3月11日 13:32:03
+    #本函数目的设计成可以用来解同类题型，输入一个表达式，算出其结果部分被字母打码的值。
+    abc=''.join([r for r in s if r.isalpha()])
+    v=''.join([str(exp)[s.index(r)] for r in s if r.isalpha()])
+    print("方法2结果:",abc,"=",v)
+    #2016年3月11日 14:11:58
+ff2()
+    
