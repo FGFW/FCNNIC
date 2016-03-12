@@ -1,0 +1,1275 @@
+[GenLV]
+No = 01
+Exp = 0
+SolNum = 200
+
+[GenLV]
+No = 02
+Exp = 172
+SolNum = 210
+
+[GenLV]
+No = 03
+Exp = 446
+SolNum = 220
+
+[GenLV]
+No = 04
+Exp = 858
+SolNum = 230
+
+[GenLV]
+No = 05
+Exp = 1421
+SolNum = 240
+
+[GenLV]
+No = 06
+Exp = 2156
+SolNum = 250
+
+[GenLV]
+No = 07
+Exp = 3088
+SolNum = 260
+
+[GenLV]
+No = 08
+Exp = 4238
+SolNum = 270
+
+[GenLV]
+No = 09
+Exp = 5634
+SolNum = 280
+
+[GenLV]
+No = 10
+Exp = 7301
+SolNum = 290
+
+[GenLV]
+No = 11
+Exp = 9269
+SolNum = 300
+
+[GenLV]
+No = 12
+Exp = 11569
+SolNum = 310
+
+[GenLV]
+No = 13
+Exp = 14231
+SolNum = 320
+
+[GenLV]
+No = 14
+Exp = 17292
+SolNum = 330
+
+[GenLV]
+No = 15
+Exp = 20786
+SolNum = 340
+
+[GenLV]
+No = 16
+Exp = 24754
+SolNum = 350
+
+[GenLV]
+No = 17
+Exp = 29234
+SolNum = 360
+
+[GenLV]
+No = 18
+Exp = 34274
+SolNum = 370
+
+[GenLV]
+No = 19
+Exp = 39915
+SolNum = 380
+
+[GenLV]
+No = 20
+Exp = 46211
+SolNum = 390
+
+[GenLV]
+No = 21
+Exp = 53211
+SolNum = 400
+
+[GenLV]
+No = 22
+Exp = 60970
+SolNum = 410
+
+[GenLV]
+No = 23
+Exp = 69548
+SolNum = 420
+
+[GenLV]
+No = 24
+Exp = 79007
+SolNum = 430
+
+[GenLV]
+No = 25
+Exp = 89411
+SolNum = 440
+
+[GenLV]
+No = 26
+Exp = 100833
+SolNum = 450
+
+[GenLV]
+No = 27
+Exp = 113344
+SolNum = 460
+
+[GenLV]
+No = 28
+Exp = 127022
+SolNum = 470
+
+[GenLV]
+No = 29
+Exp = 141952
+SolNum = 480
+
+[GenLV]
+No = 30
+Exp = 158220
+SolNum = 490
+
+[GenLV]
+No = 31
+Exp = 175920
+SolNum = 500
+
+[GenLV]
+No = 32
+Exp = 195155
+SolNum = 510
+
+[GenLV]
+No = 33
+Exp = 216021
+SolNum = 520
+
+[GenLV]
+No = 34
+Exp = 238637
+SolNum = 530
+
+[GenLV]
+No = 35
+Exp = 263117
+SolNum = 540
+
+[GenLV]
+No = 36
+Exp = 289586
+SolNum = 550
+
+[GenLV]
+No = 37
+Exp = 318175
+SolNum = 560
+
+[GenLV]
+No = 38
+Exp = 349025
+SolNum = 570
+
+[GenLV]
+No = 39
+Exp = 382283
+SolNum = 580
+
+[GenLV]
+No = 40
+Exp = 400000
+SolNum = 590
+
+[GenLV]
+No = 41
+Exp = 410000
+SolNum = 598
+
+[GenLV]
+No = 42
+Exp = 420000
+SolNum = 598
+
+[GenLV]
+No = 43
+Exp = 430000
+SolNum = 598
+
+[GenLV]
+No = 44
+Exp = 440000
+SolNum = 598
+
+[GenLV]
+No = 45
+Exp = 450000
+SolNum = 598
+
+[GenLV]
+No = 46
+Exp = 460000
+SolNum = 598
+
+[GenLV]
+No = 47
+Exp = 470000
+SolNum = 598
+
+[GenLV]
+No = 48
+Exp = 480000
+SolNum = 598
+
+[GenLV]
+No = 49
+Exp = 490000
+SolNum = 598
+
+[GenLV]
+No = 50
+Exp = 500000
+SolNum = 598
+
+[GenLV]
+No = 51
+Exp = 510000
+SolNum = 598
+
+[GenLV]
+No = 52
+Exp = 520000
+SolNum = 598
+
+[GenLV]
+No = 53
+Exp = 530000
+SolNum = 598
+
+[GenLV]
+No = 54
+Exp = 540000
+SolNum = 598
+
+[GenLV]
+No = 55
+Exp = 550000
+SolNum = 598
+
+[GenLV]
+No = 56
+Exp = 560000
+SolNum = 598
+
+[GenLV]
+No = 57
+Exp = 570000
+SolNum = 598
+
+[GenLV]
+No = 58
+Exp = 580000
+SolNum = 598
+
+[GenLV]
+No = 59
+Exp = 590000
+SolNum = 598
+
+[GenLV]
+No = 60
+Exp = 600000
+SolNum = 598
+
+[GenLV]
+No = 61
+Exp = 610000
+SolNum = 598
+
+[GenLV]
+No = 62
+Exp = 620000
+SolNum = 598
+
+[GenLV]
+No = 63
+Exp = 630000
+SolNum = 598
+
+[GenLV]
+No = 64
+Exp = 640000
+SolNum = 598
+
+[GenLV]
+No = 65
+Exp = 650000
+SolNum = 598
+
+[GenLV]
+No = 66
+Exp = 660000
+SolNum = 598
+
+[GenLV]
+No = 67
+Exp = 670000
+SolNum = 598
+
+[GenLV]
+No = 68
+Exp = 680000
+SolNum = 598
+
+[GenLV]
+No = 69
+Exp = 690000
+SolNum = 598
+
+[GenLV]
+No = 70
+Exp = 700000
+SolNum = 598
+
+[GenLV]
+No = 71
+Exp = 710000
+SolNum = 598
+
+[GenLV]
+No = 72
+Exp = 720000
+SolNum = 598
+
+[GenLV]
+No = 73
+Exp = 730000
+SolNum = 598
+
+[GenLV]
+No = 74
+Exp = 740000
+SolNum = 598
+
+[GenLV]
+No = 75
+Exp = 750000
+SolNum = 598
+
+[GenLV]
+No = 76
+Exp = 760000
+SolNum = 598
+
+[GenLV]
+No = 77
+Exp = 770000
+SolNum = 598
+
+[GenLV]
+No = 78
+Exp = 780000
+SolNum = 598
+
+[GenLV]
+No = 79
+Exp = 790000
+SolNum = 598
+
+[GenLV]
+No = 80
+Exp = 800000
+SolNum = 598
+
+[GenLV]
+No = 81
+Exp = 810000
+SolNum = 598
+
+[GenLV]
+No = 82
+Exp = 820000
+SolNum = 598
+
+[GenLV]
+No = 83
+Exp = 830000
+SolNum = 598
+
+[GenLV]
+No = 84
+Exp = 840000
+SolNum = 598
+
+[GenLV]
+No = 85
+Exp = 850000
+SolNum = 598
+
+[GenLV]
+No = 86
+Exp = 860000
+SolNum = 598
+
+[GenLV]
+No = 87
+Exp = 870000
+SolNum = 598
+
+[GenLV]
+No = 88
+Exp = 880000
+SolNum = 598
+
+[GenLV]
+No = 89
+Exp = 890000
+SolNum = 598
+
+[GenLV]
+No = 90
+Exp = 900000
+SolNum = 598
+
+[GenLV]
+No = 91
+Exp = 910000
+SolNum = 598
+
+[GenLV]
+No = 92
+Exp = 920000
+SolNum = 598
+
+[GenLV]
+No = 93
+Exp = 930000
+SolNum = 598
+
+[GenLV]
+No = 94
+Exp = 940000
+SolNum = 598
+
+[GenLV]
+No = 95
+Exp = 950000
+SolNum = 598
+
+[GenLV]
+No = 96
+Exp = 960000
+SolNum = 598
+
+[GenLV]
+No = 97
+Exp = 970000
+SolNum = 598
+
+[GenLV]
+No = 98
+Exp = 980000
+SolNum = 598
+
+[GenLV]
+No = 99
+Exp = 990000
+SolNum = 598
+
+[GenLV]
+No = 100
+Exp = 1000000
+SolNum = 598
+
+[GenLV]
+No = 101
+Exp = 1010000
+SolNum = 598
+
+[GenLV]
+No = 102
+Exp = 1020000
+SolNum = 598
+
+[GenLV]
+No = 103
+Exp = 1030000
+SolNum = 598
+
+[GenLV]
+No = 104
+Exp = 1040000
+SolNum = 598
+
+[GenLV]
+No = 105
+Exp = 1050000
+SolNum = 598
+
+[GenLV]
+No = 106
+Exp = 1060000
+SolNum = 598
+
+[GenLV]
+No = 107
+Exp = 1070000
+SolNum = 598
+
+[GenLV]
+No = 108
+Exp = 1080000
+SolNum = 598
+
+[GenLV]
+No = 109
+Exp = 1090000
+SolNum = 598
+
+[GenLV]
+No = 110
+Exp = 1100000
+SolNum = 598
+
+[GenLV]
+No = 111
+Exp = 1110000
+SolNum = 598
+
+[GenLV]
+No = 112
+Exp = 1120000
+SolNum = 598
+
+[GenLV]
+No = 113
+Exp = 1130000
+SolNum = 598
+
+[GenLV]
+No = 114
+Exp = 1140000
+SolNum = 598
+
+[GenLV]
+No = 115
+Exp = 1150000
+SolNum = 598
+
+[GenLV]
+No = 116
+Exp = 1160000
+SolNum = 598
+
+[GenLV]
+No = 117
+Exp = 1170000
+SolNum = 598
+
+[GenLV]
+No = 118
+Exp = 1180000
+SolNum = 598
+
+[GenLV]
+No = 119
+Exp = 1190000
+SolNum = 598
+
+[GenLV]
+No = 120
+Exp = 1200000
+SolNum = 598
+
+[GenLV]
+No = 121
+Exp = 1210000
+SolNum = 598
+
+[GenLV]
+No = 122
+Exp = 1220000
+SolNum = 598
+
+[GenLV]
+No = 123
+Exp = 1230000
+SolNum = 598
+
+[GenLV]
+No = 124
+Exp = 1240000
+SolNum = 598
+
+[GenLV]
+No = 125
+Exp = 1250000
+SolNum = 598
+
+[GenLV]
+No = 126
+Exp = 1260000
+SolNum = 598
+
+[GenLV]
+No = 127
+Exp = 1270000
+SolNum = 598
+
+[GenLV]
+No = 128
+Exp = 1280000
+SolNum = 598
+
+[GenLV]
+No = 129
+Exp = 1290000
+SolNum = 598
+
+[GenLV]
+No = 130
+Exp = 1300000
+SolNum = 598
+
+[GenLV]
+No = 131
+Exp = 1310000
+SolNum = 598
+
+[GenLV]
+No = 132
+Exp = 1320000
+SolNum = 598
+
+[GenLV]
+No = 133
+Exp = 1330000
+SolNum = 598
+
+[GenLV]
+No = 134
+Exp = 1340000
+SolNum = 598
+
+[GenLV]
+No = 135
+Exp = 1350000
+SolNum = 598
+
+[GenLV]
+No = 136
+Exp = 1360000
+SolNum = 598
+
+[GenLV]
+No = 137
+Exp = 1370000
+SolNum = 598
+
+[GenLV]
+No = 138
+Exp = 1380000
+SolNum = 598
+
+[GenLV]
+No = 139
+Exp = 1390000
+SolNum = 598
+
+[GenLV]
+No = 140
+Exp = 1400000
+SolNum = 598
+
+[GenLV]
+No = 141
+Exp = 1410000
+SolNum = 598
+
+[GenLV]
+No = 142
+Exp = 1420000
+SolNum = 598
+
+[GenLV]
+No = 143
+Exp = 1430000
+SolNum = 598
+
+[GenLV]
+No = 144
+Exp = 1440000
+SolNum = 598
+
+[GenLV]
+No = 145
+Exp = 1450000
+SolNum = 598
+
+[GenLV]
+No = 146
+Exp = 1460000
+SolNum = 598
+
+[GenLV]
+No = 147
+Exp = 1470000
+SolNum = 598
+
+[GenLV]
+No = 148
+Exp = 1480000
+SolNum = 598
+
+[GenLV]
+No = 149
+Exp = 1490000
+SolNum = 598
+
+[GenLV]
+No = 150
+Exp = 1500000
+SolNum = 598
+
+[GenLV]
+No = 151
+Exp = 1510000
+SolNum = 598
+
+[GenLV]
+No = 152
+Exp = 1520000
+SolNum = 598
+
+[GenLV]
+No = 153
+Exp = 1530000
+SolNum = 598
+
+[GenLV]
+No = 154
+Exp = 1540000
+SolNum = 598
+
+[GenLV]
+No = 155
+Exp = 1550000
+SolNum = 598
+
+[GenLV]
+No = 156
+Exp = 1560000
+SolNum = 598
+
+[GenLV]
+No = 157
+Exp = 1570000
+SolNum = 598
+
+[GenLV]
+No = 158
+Exp = 1580000
+SolNum = 598
+
+[GenLV]
+No = 159
+Exp = 1590000
+SolNum = 598
+
+[GenLV]
+No = 160
+Exp = 1600000
+SolNum = 598
+
+[GenLV]
+No = 161
+Exp = 1610000
+SolNum = 598
+
+[GenLV]
+No = 162
+Exp = 1620000
+SolNum = 598
+
+[GenLV]
+No = 163
+Exp = 1630000
+SolNum = 598
+
+[GenLV]
+No = 164
+Exp = 1640000
+SolNum = 598
+
+[GenLV]
+No = 165
+Exp = 1650000
+SolNum = 598
+
+[GenLV]
+No = 166
+Exp = 1660000
+SolNum = 598
+
+[GenLV]
+No = 167
+Exp = 1670000
+SolNum = 598
+
+[GenLV]
+No = 168
+Exp = 1680000
+SolNum = 598
+
+[GenLV]
+No = 169
+Exp = 1690000
+SolNum = 598
+
+[GenLV]
+No = 170
+Exp = 1700000
+SolNum = 598
+
+[GenLV]
+No = 171
+Exp = 1710000
+SolNum = 598
+
+[GenLV]
+No = 172
+Exp = 1720000
+SolNum = 598
+
+[GenLV]
+No = 173
+Exp = 1730000
+SolNum = 598
+
+[GenLV]
+No = 174
+Exp = 1740000
+SolNum = 598
+
+[GenLV]
+No = 175
+Exp = 1750000
+SolNum = 598
+
+[GenLV]
+No = 176
+Exp = 1760000
+SolNum = 598
+
+[GenLV]
+No = 177
+Exp = 1770000
+SolNum = 598
+
+[GenLV]
+No = 178
+Exp = 1780000
+SolNum = 598
+
+[GenLV]
+No = 179
+Exp = 1790000
+SolNum = 598
+
+[GenLV]
+No = 180
+Exp = 1800000
+SolNum = 598
+
+[GenLV]
+No = 181
+Exp = 1810000
+SolNum = 598
+
+[GenLV]
+No = 182
+Exp = 1820000
+SolNum = 598
+
+[GenLV]
+No = 183
+Exp = 1830000
+SolNum = 598
+
+[GenLV]
+No = 184
+Exp = 1840000
+SolNum = 598
+
+[GenLV]
+No = 185
+Exp = 1850000
+SolNum = 598
+
+[GenLV]
+No = 186
+Exp = 1860000
+SolNum = 598
+
+[GenLV]
+No = 187
+Exp = 1870000
+SolNum = 598
+
+[GenLV]
+No = 188
+Exp = 1880000
+SolNum = 598
+
+[GenLV]
+No = 189
+Exp = 1890000
+SolNum = 598
+
+[GenLV]
+No = 190
+Exp = 1900000
+SolNum = 598
+
+[GenLV]
+No = 191
+Exp = 1910000
+SolNum = 598
+
+[GenLV]
+No = 192
+Exp = 1920000
+SolNum = 598
+
+[GenLV]
+No = 193
+Exp = 1930000
+SolNum = 598
+
+[GenLV]
+No = 194
+Exp = 1940000
+SolNum = 598
+
+[GenLV]
+No = 195
+Exp = 1950000
+SolNum = 598
+
+[GenLV]
+No = 196
+Exp = 1960000
+SolNum = 598
+
+[GenLV]
+No = 197
+Exp = 1970000
+SolNum = 598
+
+[GenLV]
+No = 198
+Exp = 1980000
+SolNum = 598
+
+[GenLV]
+No = 199
+Exp = 1990000
+SolNum = 598
+
+[GenLV]
+No = 200
+Exp = 2000000
+SolNum = 598
+
+[GenLV]
+No = 201
+Exp = 2010000
+SolNum = 598
+
+[GenLV]
+No = 202
+Exp = 2020000
+SolNum = 598
+
+[GenLV]
+No = 203
+Exp = 2030000
+SolNum = 598
+
+[GenLV]
+No = 204
+Exp = 2040000
+SolNum = 598
+
+[GenLV]
+No = 205
+Exp = 2050000
+SolNum = 598
+
+[GenLV]
+No = 206
+Exp = 2060000
+SolNum = 598
+
+[GenLV]
+No = 207
+Exp = 2070000
+SolNum = 598
+
+[GenLV]
+No = 208
+Exp = 2080000
+SolNum = 598
+
+[GenLV]
+No = 209
+Exp = 2090000
+SolNum = 598
+
+[GenLV]
+No = 210
+Exp = 2100000
+SolNum = 598
+
+[GenLV]
+No = 211
+Exp = 2110000
+SolNum = 598
+
+[GenLV]
+No = 212
+Exp = 2120000
+SolNum = 598
+
+[GenLV]
+No = 213
+Exp = 2130000
+SolNum = 598
+
+[GenLV]
+No = 214
+Exp = 2140000
+SolNum = 598
+
+[GenLV]
+No = 215
+Exp = 2150000
+SolNum = 598
+
+[GenLV]
+No = 216
+Exp = 2160000
+SolNum = 598
+
+[GenLV]
+No = 217
+Exp = 2170000
+SolNum = 598
+
+[GenLV]
+No = 218
+Exp = 2180000
+SolNum = 598
+
+[GenLV]
+No = 219
+Exp = 2190000
+SolNum = 598
+
+[GenLV]
+No = 220
+Exp = 2200000
+SolNum = 598
+
+[GenLV]
+No = 221
+Exp = 2210000
+SolNum = 598
+
+[GenLV]
+No = 222
+Exp = 2220000
+SolNum = 598
+
+[GenLV]
+No = 223
+Exp = 2230000
+SolNum = 598
+
+[GenLV]
+No = 224
+Exp = 2240000
+SolNum = 598
+
+[GenLV]
+No = 225
+Exp = 2250000
+SolNum = 598
+
+[GenLV]
+No = 226
+Exp = 2260000
+SolNum = 598
+
+[GenLV]
+No = 227
+Exp = 2270000
+SolNum = 598
+
+[GenLV]
+No = 228
+Exp = 2280000
+SolNum = 598
+
+[GenLV]
+No = 229
+Exp = 2290000
+SolNum = 598
+
+[GenLV]
+No = 230
+Exp = 2300000
+SolNum = 598
+
+[GenLV]
+No = 231
+Exp = 2310000
+SolNum = 598
+
+[GenLV]
+No = 232
+Exp = 2320000
+SolNum = 598
+
+[GenLV]
+No = 233
+Exp = 2330000
+SolNum = 598
+
+[GenLV]
+No = 234
+Exp = 2340000
+SolNum = 598
+
+[GenLV]
+No = 235
+Exp = 2350000
+SolNum = 598
+
+[GenLV]
+No = 236
+Exp = 2360000
+SolNum = 598
+
+[GenLV]
+No = 237
+Exp = 2370000
+SolNum = 598
+
+[GenLV]
+No = 238
+Exp = 2380000
+SolNum = 598
+
+[GenLV]
+No = 239
+Exp = 2390000
+SolNum = 598
+
+[GenLV]
+No = 240
+Exp = 2400000
+SolNum = 598
+
+[GenLV]
+No = 241
+Exp = 2410000
+SolNum = 598
+
+[GenLV]
+No = 242
+Exp = 2420000
+SolNum = 598
+
+[GenLV]
+No = 243
+Exp = 2430000
+SolNum = 598
+
+[GenLV]
+No = 244
+Exp = 2440000
+SolNum = 598
+
+[GenLV]
+No = 245
+Exp = 2450000
+SolNum = 598
+
+[GenLV]
+No = 246
+Exp = 2460000
+SolNum = 598
+
+[GenLV]
+No = 247
+Exp = 2470000
+SolNum = 598
+
+[GenLV]
+No = 248
+Exp = 2480000
+SolNum = 598
+
+[GenLV]
+No = 249
+Exp = 2490000
+SolNum = 598
+
+[GenLV]
+No = 250
+Exp = 2500000
+SolNum = 598
+
+[GenLV]
+No = 251
+Exp = 2510000
+SolNum = 598
+
+[GenLV]
+No = 252
+Exp = 2520000
+SolNum = 598
+
+[GenLV]
+No = 253
+Exp = 2530000
+SolNum = 598
+
+[GenLV]
+No = 254
+Exp = 2540000
+SolNum = 598
+
+[GenLV]
+No = 255
+Exp = 2550000
+SolNum = 598
+
