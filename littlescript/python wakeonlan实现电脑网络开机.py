@@ -16,6 +16,4 @@ from wakeonlan import wol
 
 with open("mac.txt") as f:
     for mac in f:
-        wol.send_magic_packet(mac.strip(),ip_address="192.168.255.255")
-
-
+        wol.send_magic_packet(mac.strip(),ip_address="192.168.199.255")
