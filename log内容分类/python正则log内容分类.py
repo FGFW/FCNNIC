@@ -1,5 +1,6 @@
 """
 python正则log内容分类.py
+http://stackoverflow.com/questions/36182906/regex-matching-of-numbers-and-redirecting-them-to-different-output-files/36185163#36185163
 2016年3月24日 00:54:44 codegay
 """
 import re
