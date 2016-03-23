@@ -39,3 +39,5 @@ python提取PKPM软件数据到EXCEL文件/test.xlsx
 python读写INI文件/a.txt
 python读写INI文件/b.txt
 */__pycache__/*
+log内容分类/1.log
+log内容分类/0.log
