@@ -12,3 +12,9 @@ result=unique(txt) #内置函数unique去重
 #result=Set(txt) Set()方法把数组转为集合,集合中的元素唯一,Set是首字母大写的!
 @show length(result)
 write(open("result.txt","w+"),result) #与python不同,julia把数组写入文件不需要wirtelines
+
+#装B代码一行流
+write(open("result.txt","w+"),unique(vcat(readlines(open("1.txt")),readlines(open("2.txt")))))
+
+#julia管道一行流
+union("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|>write("result.txt");
