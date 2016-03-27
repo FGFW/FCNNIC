@@ -14,7 +14,15 @@ result=unique(txt) #内置函数unique去重
 write(open("result.txt","w+"),result) #与python不同,julia把数组写入文件不需要wirtelines
 
 #装B代码一行流
-write(open("result.txt","w+"),unique(vcat(readlines(open("1.txt")),readlines(open("2.txt")))))
+write(open("result.txt","w+"),unique(vcat(readlines(open("1.txt")),readlines(open("2.txt")))));
 
 #julia管道一行流
-union("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|>write("result.txt");
+union("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|>xxx->write("result.txt",xxx);
+
+#write("result.txt",Set(["1.txt"|>open|>readlines; "2.txt"|>open|>readlines]));
+
+txt3=[txt1;txt2]
+@show txt3
+@show length(txt3)
+@show Set(txt3)
+@show length(Set(txt3))
