@@ -11,15 +11,15 @@ txt=vcat(txt1,txt2) #以readlines取读文件流,vcat连接两个Array,julia不�
 result=unique(txt) #内置函数unique去重
 #result=Set(txt) Set()方法把数组转为集合,集合中的元素唯一,Set是首字母大写的!
 @show length(result)
-write(open("result.txt","w+"),result) #与python不同,julia把数组写入文件不需要wirtelines
+#write(open("result.txt","w+"),result) #与python不同,julia把数组写入文件不需要wirtelines
 
 #装B代码一行流
-write(open("result.txt","w+"),unique(vcat(readlines(open("1.txt")),readlines(open("2.txt")))));
+#write(open("result.txt","w+"),unique(vcat(readlines(open("1.txt")),readlines(open("2.txt")))));
 
 #julia管道一行流
-union("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|>xxx->write("result.txt",xxx);
-
-#write("result.txt",Set(["1.txt"|>open|>readlines; "2.txt"|>open|>readlines]));
+#union("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|> xxx ->write(open("result.txt","w"),xxx);
+#write(open("result.txt","w"),union(["1.txt"|>open|>readlines; "2.txt"|>open|>readlines]));
+∪("1.txt"|>open|>readlines,"2.txt"|>open|>readlines)|> xxx ->write(open("result.txt","w"),xxx);
 
 txt3=[txt1;txt2]
 @show txt3
