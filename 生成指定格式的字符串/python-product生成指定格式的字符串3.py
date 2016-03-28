@@ -10,4 +10,3 @@ ss='abcdefghijklmnopqrstuvwxyz0123456789'
 with open("result.txt","w+") as f:
     for a,b,c in product(ss,ss,ss):
         f.write(a+a+b+c+b+c+"\n")
-
