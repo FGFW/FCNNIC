@@ -3,7 +3,11 @@
 http://bbs.bathome.net/thread-39829-1-1.html
 2016年3月27日 21:46:41  codegay
 """
-#这是生成aabcbc的
+import time
+start=time.time()
+print("运行中..."*3)
+
+#这是生成aabcbc格式字符串
 import itertools
 from itertools import product
 ss='abcdefghijklmnopqrstuvwxyz0123456789'
@@ -14,3 +18,12 @@ with open("result.txt","w+") as f:
             s=''.join(r)
             #print(s)
             f.write(s+"\n")
+
+
+    
+    
+end=time.time()
+pt=end-start
+print("运行耗时：",pt)
+
+input()
