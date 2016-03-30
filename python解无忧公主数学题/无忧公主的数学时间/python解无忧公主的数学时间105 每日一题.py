@@ -18,6 +18,7 @@ def ff1():
             if s<99999 and fY==sY and fT==tT==sT:
                 print(s)
 #ff1()
+
 def ff2():
     from itertools import permutations
     for h in permutations([g for g in range(10)]):
@@ -27,8 +28,7 @@ def ff2():
             ten=t*100+e*10+n
             sixty=s*10000+i*1000+x*100+t*10+y
             if forty+ten*2==sixty:
-                print(t)
+                print("105结果:T==",t)
 #8
 #[Finished in 6.7s]
 ff2()
-
