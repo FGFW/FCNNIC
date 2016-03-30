@@ -19,8 +19,8 @@ def ff1():
         cde=c*100+d*10+e
         def0=d*100+e*10+f
         efg=e*100+f*10+g
-        ghij=abc+bcd+cde+def0+efg
-        if abc>=100 and bcd >=100 and cde>=100 and def0>=100 and efg>=100 and 1000<=ghij<10000  and len(set(str(ghij)))==len(str(ghij)):
+        ghij=g*1000+h*100+i*10+j
+        if ghij==abc+bcd+cde+def0+efg and abc>=100 and bcd >=100 and cde>=100 and def0>=100 and efg>=100 and 1000<=ghij<10000  and len(set(str(ghij)))==len(str(ghij)):
             result.append(ghij)
     print(len(result))
     print("测试",max(result))
