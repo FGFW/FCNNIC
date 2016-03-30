@@ -25,11 +25,9 @@ def ff1():
                 if efg>=100 and 1000<=ghij<10000 :
                     if len(set(str(ghij)))==len(str(ghij)):
                         result.append(ghij)
-    print(len(result))
-    print("测试",max(result))
+    print("问题答案1:",len(result))
+    print("最大的ghij是多少？",max(result))
+#问题答案1: 108
+#最大的ghij是多少？ 3425
+#[Finished in 5.5s]
 ff1()
-
-
-
-
-
